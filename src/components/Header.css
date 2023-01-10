@@ -1,0 +1,108 @@
+/* ===============
+   1.  ul class .flex
+================ */
+
+.main-list {
+  padding: 20px;
+  font-size: 19px;
+  position: relative;
+}
+
+.main-link {
+  transition: 0.3s;
+  padding: 8px 15px;
+}
+
+.main-link.active {
+  color: cyan;
+  box-shadow: 0 0 5px cyan;
+  border-radius: 5px;
+}
+
+.main-link:hover {
+  font-size: 25px;
+}
+.hide-when-mobile {
+  display: flex;
+  justify-content: space-around;
+}
+
+.show-when-mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  /* ==================
+    3. header of mobile
+===================== */
+  .show-when-mobile {
+    display: none;
+  }
+
+  .show-when-mobile {
+    display: block;
+  }
+
+  .hide-when-mobile {
+    display: none;
+  }
+
+  /* ====================================
+    1. Font Awesom hamburger menu
+======================================= */
+  .absolute {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+
+  input {
+    display: none;
+  }
+
+  .fa-bars {
+    font-size: 30px;
+    transform: scaleX(1.4);
+  }
+
+  .fas {
+    position: absolute;
+    right: 10vw;
+  }
+
+  /* ====================================
+    2. show on click
+======================================= */
+
+  .show-on-click {
+    display: none;
+    border-top: 2px solid black;
+  }
+
+  #burger:checked + .show-on-click {
+    display: block;
+  }
+
+  label {
+    font-size: 22px;
+    /* border: 2px solid red; */
+    display: block;
+    padding: 20px;
+  }
+
+  label:hover,
+  .fa-bars:hover,
+  .sub-div li a:hover,
+  label:hover .fas {
+    color: cyan;
+    letter-spacing: 2px;
+  }
+
+  .sub-div li a {
+    display: block;
+  }
+
+  .main-div {
+    border-bottom: 2px solid black;
+  }
+}
